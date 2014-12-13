@@ -506,7 +506,7 @@
 
         <source-file src="src/ios/Aviary.m" />
         <header-file src="src/ios/Aviary.h" />
-        <source-file src="src/ios/AviarySDK.framework" framework="true" />
+        <framework src="src/ios/AviarySDK.framework" custom="true" />
     	<resource-file src="src/ios/AviarySDKResources.bundle" />
     </platform>
 </plugin>
