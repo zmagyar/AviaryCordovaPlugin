@@ -1,6 +1,6 @@
 #import "Aviary.h"
 #import <Cordova/CDVPlugin.h>
-#import "AFPhotoEditorController.h"
+#import "AviarySDK.framework/Headers/AviarySDK.h"
 
 @implementation Aviary
 
@@ -105,6 +105,11 @@
         [AFPhotoEditorCustomization setToolOrder:tools];
     }
     
+    static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		[AFPhotoEditorController setAPIKey:[command.arguments objectAtIndex:11] secret:[command.arguments objectAtIndex:12]];
+	});
+
     self.aviary = [[AFPhotoEditorController alloc] initWithImage:image];
     [self.aviary setDelegate:self];
     [self.viewController presentModalViewController:self.aviary animated:YES];

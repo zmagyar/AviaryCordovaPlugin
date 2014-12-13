@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Cordova/CDVPlugin.h>
-#import "AFPhotoEditorController.h"
+#import "AviarySDK.framework/Headers/AFPhotoEditorController.h"
 
 @interface Aviary : CDVPlugin <AFPhotoEditorControllerDelegate> {
     AFPhotoEditorController* aviary;

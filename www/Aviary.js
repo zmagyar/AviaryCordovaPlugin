@@ -52,7 +52,9 @@ Aviary.prototype = {
                 options.enableStickersPacks, // 7 - enable stickers packs
                 options.disableVibration, // 8 - disable vibration
                 options.inSaveOnNoChanges, // 9 - in save on no changes
-                options.folderName // 10 - name of folder where images are saved
+                options.folderName, // 10 - name of folder where images are saved
+                options.avKey, // 11 - aviary key
+                options.avSecret //12 - aviary secret
             ]);
         };
 
