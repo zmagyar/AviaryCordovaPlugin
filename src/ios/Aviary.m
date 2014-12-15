@@ -189,16 +189,14 @@
                                resultWithStatus:CDVCommandStatus_OK
                                messageAsDictionary:dict];
     
-    NSString* javaScript = [result toSuccessCallbackString:self.pluginCallbackId];
-    [self writeJavascript:javaScript];
+    [self.commandDelegate sendPluginResult:result callbackId:self.pluginCallbackId];
 }
 
 -(void) returnError:(NSString*)message
 {
     CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:message];
     
-    NSString* javaScript = [result toSuccessCallbackString:self.pluginCallbackId];
-    [self writeJavascript:javaScript];
+    [self.commandDelegate sendPluginResult:result callbackId:self.pluginCallbackId];
 }
 
 
