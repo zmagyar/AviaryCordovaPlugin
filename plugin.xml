@@ -11,6 +11,8 @@
     </js-module>
 
     <platform name="android">
+        <dependency id="android.support.v4" url="https://github.com/MobileChromeApps/cordova-plugin-android-support-v4" />
+
         <source-file src="src/android/com/m1is/aviary/Aviary.java" target-dir="src/com/m1is/aviary" />
 
         <config-file target="res/xml/config.xml" parent="/*">
@@ -59,7 +61,6 @@
         </config-file>
 
         <source-file src="src/android/libs/abtest.jar" target-dir="libs"/>
-        <source-file src="src/android/libs/android-support-v4.jar" target-dir="libs"/>
         <source-file src="src/android/libs/aviary-headless-library.jar" target-dir="libs"/>
         <source-file src="src/android/libs/aviary-library.jar" target-dir="libs"/>
         <source-file src="src/android/libs/aviary-tracking.jar" target-dir="libs"/>
